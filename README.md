@@ -63,7 +63,7 @@ No backend, database, or API keys are required — everything runs client-side.
 
 ```bash
 # 1. Unzip / clone the project, then move into it
-cd Taylor Swift — Eras After Midnight
+cd Taylor Swift
 
 # 2. Install dependencies
 npm install
@@ -127,7 +127,7 @@ npm run start
 Update the playlist ID at the top of `app/hooks/useBroadcastPlayer.js`:
 
 ```js
-const PLAYLIST_ID = "PLlWZj99fwdl88EcZDDU3ubcIYOhiUCvp-";
+const PLAYLIST_ID = "RDCLAK5uy_k1272v-yXtLJm7gmMiAxjOl-vh5aEC11A";
 ```
 
 Any public YouTube playlist ID will work.
