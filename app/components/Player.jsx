@@ -1,3 +1,11 @@
+import {
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  Play,
+  Volume2,
+  VolumeOff,
+} from "lucide-react";
 import { formatTime, PLAYLIST_URL } from "../hooks/useBroadcastPlayer";
 
 export default function Player({
@@ -119,20 +127,20 @@ export default function Player({
             text-[19px] md:text-[22px] cursor-pointer
             w-[30px] h-[30px] hover:text-[#d8c3ff] transition-colors"
         >
-          ↶
+          <ChevronLeft />
         </button>
 
         <button
           onClick={playPause}
           aria-label={playing ? "Pause" : "Play"}
-          className="w-[35px] h-[35px] md:w-[46px] md:h-[46px]
-            rounded-full border border-white/70
-            text-[13px] md:text-[16px] leading-none
-            bg-[#75658f]
-            shadow-[0_0_20px_rgba(190,170,220,.35)]
-            hover:bg-[#8a76a8] transition-colors"
+          className="flex items-center justify-center text-white w-[35px] h-[35px] md:w-[46px] md:h-[46px]
+    rounded-full border border-white/70
+    text-[13px] md:text-[16px] leading-none
+    bg-[#75658f]
+    shadow-[0_0_20px_rgba(190,170,220,.35)]
+    hover:bg-[#8a76a8] transition-colors"
         >
-          {playing ? "Ⅱ" : "▶"}
+          {playing ? <Pause fill="white" /> : <Play fill="white" />}{" "}
         </button>
 
         <button
@@ -142,7 +150,7 @@ export default function Player({
             text-[19px] md:text-[22px] cursor-pointer
             w-[30px] h-[30px] hover:text-[#d8c3ff] transition-colors"
         >
-          ↷
+          <ChevronRight />
         </button>
 
         <button
@@ -152,7 +160,7 @@ export default function Player({
             text-[14px] md:text-[16px] cursor-pointer w-4
             hover:text-[#d8c3ff] transition-colors"
         >
-          {muted ? "×" : "◖"}
+          {muted ? <VolumeOff /> : <Volume2 />}
         </button>
 
         <input
