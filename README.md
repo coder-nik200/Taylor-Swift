@@ -1,4 +1,4 @@
-# Taylor Swift — After Hours
+# Taylor Swift — Eras After Midnight
 
 ![Banner](public/readme/Taylor-banner.jpeg)
 
