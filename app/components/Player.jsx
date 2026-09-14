@@ -5,6 +5,7 @@ import {
   Play,
   Volume2,
   VolumeOff,
+  Shuffle,
 } from "lucide-react";
 import { formatTime, PLAYLIST_URL } from "../hooks/useBroadcastPlayer";
 
@@ -14,12 +15,14 @@ export default function Player({
   duration,
   volume,
   muted,
+  shuffle,
   playlist,
   activeIndex,
   track,
   playPause,
   previousVideo,
   nextVideo,
+  toggleShuffle,
   seek,
   changeVolume,
   toggleMute,
@@ -120,6 +123,17 @@ export default function Player({
 
       {/* CONTROLS */}
       <div className="flex items-center justify-center gap-[22px] md:gap-7 my-1 mb-2 md:mb-3">
+        <button
+          onClick={toggleShuffle}
+          aria-label={shuffle ? "Disable shuffle" : "Enable shuffle"}
+          aria-pressed={shuffle}
+          className={`border-0 bg-transparent text-[14px] md:text-[16px] cursor-pointer w-4 ${
+            shuffle ? "text-[#d8c3ff]" : "text-[#f5eee7]"
+          }`}
+        >
+          <Shuffle />
+        </button>
+
         <button
           onClick={previousVideo}
           aria-label="Previous track"

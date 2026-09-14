@@ -20,6 +20,7 @@ export default function Home() {
     duration,
     volume,
     muted,
+    shuffle,
     clock,
     quote,
     glitching,
@@ -30,6 +31,7 @@ export default function Home() {
     playPause,
     previousVideo,
     nextVideo,
+    toggleShuffle,
     seek,
     changeVolume,
     toggleMute,
@@ -131,12 +133,14 @@ export default function Home() {
             duration={duration}
             volume={volume}
             muted={muted}
+            shuffle={shuffle}
             playlist={playlist}
             activeIndex={activeIndex}
             track={track}
             playPause={playPause}
             previousVideo={previousVideo}
             nextVideo={nextVideo}
+            toggleShuffle={toggleShuffle}
             seek={seek}
             changeVolume={changeVolume}
             toggleMute={toggleMute}
